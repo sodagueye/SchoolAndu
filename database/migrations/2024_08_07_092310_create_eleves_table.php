@@ -16,12 +16,10 @@ return new class extends Migration
             $table->string('ien');
             $table->string('nom');
             $table->string('prenom');
-            $table->string('telephone');
             $table->date('dateDeNaissance');
-            $table->date('sexe');
-            // $table->foreignId('etabllissement_id')->constrained()->onDelete('cascade');
-            // $table->foreignId('classe_id')->constrained()->onDelete('cascade');
-            // $table->foreignId('parenteleve_id')->constrained()->onDelete('cascade');
+            $table->string('sexe');
+            $table->string('telephoneParent');
+            
             $table->timestamps();
         });
     }

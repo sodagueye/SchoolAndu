@@ -12,6 +12,11 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    public function userable()
+    {
+        return $this->morphTo();
+    }
+
     /**
      * The attributes that are mass assignable.
      *

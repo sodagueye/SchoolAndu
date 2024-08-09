@@ -8,6 +8,20 @@ use Illuminate\Database\Eloquent\Model;
 class Eleve extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'ien',
+        'nom',
+        'prenom',
+        'dateDeNaissance',
+        'sexe',
+        'telephoneParent',
+    ];
+
+    // Define any date casts
+    protected $casts = [
+        'dateDeNaissance' => 'date',
+    ];
     public function etablissement()
     {
         return $this->belongsTo(Etablissement::class);
